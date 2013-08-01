@@ -7,7 +7,11 @@
  * found in the LICENSE.txt file.
  */
 
+#ifdef __AARCH64EB__
+OUTPUT_FORMAT("elf64-bigaarch64")
+#else
 OUTPUT_FORMAT("elf64-littleaarch64")
+#endif
 OUTPUT_ARCH(aarch64)
 TARGET(binary)
 
